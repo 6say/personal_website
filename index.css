@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-term-bg: #0f0f0f;
+    --color-term-bg-light: #1a1a1a;
+    --color-term-panel: #141414;
+    --color-term-text: #d4d4d4;
+    --color-term-text-dim: #808080;
+    --color-term-green: #4ec9b0;
+    --color-term-accent: #7dd3fc;
+    --color-term-red: #f87171;
+    --color-term-yellow: #fbbf24;
+    --color-term-purple: #d8b4fe;
+    --color-term-orange: #fb923c;
+  }
+
+  html {
+    background-color: var(--color-term-bg);
+    color: var(--color-term-text);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-term-bg);
+    color: var(--color-term-text);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-term-accent);
+    line-height: 1.2;
+    margin: 1.5rem 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-term-accent);
+    margin: 1.25rem 0 0.75rem 0;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-term-green);
+    margin: 0.75rem 0 0.5rem 0;
+  }
+
+  a {
+    color: var(--color-term-accent);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  a:hover {
+    opacity: 0.9;
+    border-bottom-color: var(--color-term-accent);
+  }
+
+  code {
+    background-color: var(--color-term-bg-light);
+    color: var(--color-term-green);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+    font-size: 0.9em;
+  }
+
+  p {
+    color: rgba(212, 212, 212, 0.9);
+    line-height: 1.7;
+    margin: 0.75rem 0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    background-color: var(--color-term-accent);
+    color: var(--color-term-bg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid var(--color-term-accent);
+  }
+
+  .btn-primary:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(125, 211, 252, 0.2);
+  }
+
+  .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    border: 2px solid var(--color-term-accent);
+    color: var(--color-term-accent);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-term-accent);
+    color: var(--color-term-bg);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(125, 211, 252, 0.2);
+  }
+
+  .btn-outline {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    border: 2px solid rgba(212, 212, 212, 0.3);
+    color: var(--color-term-text);
+    transition: all 0.2s ease;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .btn-outline:hover {
+    border-color: rgba(212, 212, 212, 0.6);
+    background-color: rgba(212, 212, 212, 0.05);
+  }
+
+  .card {
+    background-color: var(--color-term-panel);
+    border: 1px solid rgba(212, 212, 212, 0.08);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(125, 211, 252, 0.5);
+    background-color: rgba(125, 211, 252, 0.02);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-term-bg-light);
+    border: 1px solid rgba(212, 212, 212, 0.2);
+    border-radius: 0.375rem;
+    color: var(--color-term-text);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+    transition: all 0.2s ease;
+  }
+
+  .input-field::placeholder {
+    color: rgba(212, 212, 212, 0.4);
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--color-term-accent);
+    background-color: rgba(125, 211, 252, 0.05);
+    box-shadow: 0 0 0 2px rgba(125, 211, 252, 0.1);
+  }
+
+  .section-title {
+    color: var(--color-term-green);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .terminal-prompt {
+    color: var(--color-term-green);
+  }
+
+  .terminal-path {
+    color: var(--color-term-text);
+  }
+
+  .skill-tag {
+    display: inline-block;
+    background-color: var(--color-term-bg-light);
+    border: 1px solid rgba(212, 212, 212, 0.15);
+    color: var(--color-term-text);
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+  }
+
+  .skill-tag:hover {
+    border-color: var(--color-term-accent);
+    background-color: rgba(125, 211, 252, 0.1);
+    color: var(--color-term-accent);
+  }
+}
