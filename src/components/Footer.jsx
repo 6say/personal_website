@@ -14,7 +14,7 @@ function Footer() {
         &copy; {new Date().getFullYear()} Ndiaga Cissé — built with
         <span style={{ color: '#7dd3fc' }}> React</span> +
         <span style={{ color: '#7dd3fc' }}> Vite</span> +
-        <span style={{ color: '#7dd3fc' }}> Tailwind CSS</span>, self-hosted on my homelab.
+        <span style={{ color: '#7dd3fc' }}> Tailwind CSS</span>, and self-hosted on my homelab.
       </p>
     </footer>
   )
