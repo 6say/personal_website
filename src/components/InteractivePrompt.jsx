@@ -17,14 +17,12 @@ function InteractivePrompt() {
 
     if (trimmed === 'whoami') {
       navigate('/')
-    } else if (trimmed.startsWith('man ')) {
+    } else if (trimmed === 'man ndiaga') {
       navigate('/about')
-    } else if (trimmed === 'ls ~/skills') {
-      navigate('/skills')
-    } else if (trimmed === 'cat resume.md') {
+    } else if (trimmed === 'sudo hire me' || trimmed === 'ls ~/skills' || trimmed === 'cat resume.md') {
       navigate('/resume')
-    } else if (trimmed === 'echo $contact' || trimmed === 'echo $CONTACT') {
-      navigate('/contact')
+    } else if (trimmed === 'cat README.md') {
+      navigate('/about')
     }
   }
 

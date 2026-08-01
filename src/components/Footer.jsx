@@ -13,8 +13,7 @@ function Footer() {
       <p style={{ margin: 0, lineHeight: 1.6 }}>
         &copy; {new Date().getFullYear()} Ndiaga Cissé — built with
         <span style={{ color: '#7dd3fc' }}> React</span> +
-        <span style={{ color: '#7dd3fc' }}> Vite</span> +
-        <span style={{ color: '#7dd3fc' }}> Tailwind CSS</span>, and self-hosted on my homelab.
+        <span> Love</span>, and self-hosted on my homelab.
       </p>
     </footer>
   )

@@ -3,10 +3,8 @@ import InteractivePrompt from './InteractivePrompt'
 
 const links = [
   { to: '/', label: 'home' },
-  { to: '/skills', label: 'skills' },
   { to: '/resume', label: 'resume' },
   { to: '/about', label: 'about' },
-  { to: '/contact', label: 'contact' },
 ]
 
 function Navbar() {

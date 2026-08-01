@@ -31,7 +31,7 @@ function Home() {
         <div style={{ flex: 1, minWidth: '200px' }}>
           <h1 style={{ margin: '0 0 0.5rem 0' }}>Ndiaga Cissé</h1>
           <p style={{ color: '#4ec9b0', margin: '0 0 0.75rem 0', fontSize: '0.95rem' }}>
-            Computer Engineering Student @Concordia
+            Computer Engineering Student <a href="https://www.concordia.ca/">@Concordia</a>
           </p>
           <p style={{ color: 'rgba(212,212,212,0.7)', margin: '0', fontSize: '0.875rem' }}>
             Tinkerer at heart • Self learner • Linux enthusiast
@@ -54,7 +54,7 @@ function Home() {
         <Link to="/resume" className="btn-primary">
           View resume
         </Link>
-        <Link to="/contact" className="btn-secondary">
+        <Link to="/about" className="btn-secondary">
           Get in touch
         </Link>
       </div>
