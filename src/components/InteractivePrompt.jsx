@@ -13,17 +13,22 @@ function InteractivePrompt() {
   }, [])
 
   const handleCommand = (command) => {
-    const trimmed = command.trim().toLowerCase()
 
-    if (trimmed === 'whoami') {
+    if (command === 'whoami' || command === 'cd') {
       navigate('/')
-    } else if (trimmed === 'man ndiaga') {
+    } else if (command === 'man ndiaga') {
       navigate('/about')
-    } else if (trimmed === 'sudo hire me' || trimmed === 'ls ~/skills' || trimmed === 'cat resume.md') {
+    } else if (command === 'sudo hire me' || command === 'ls ~/skills' || command === 'cat resume.md') {
       navigate('/resume')
-    } else if (trimmed === 'cat README.md') {
+    } else if (command === 'cat README.md' ) {
       navigate('/about')
-    }
+    } else if (command.startsWith('cd')) {
+      let target = '/' + command.substring(3);
+      if(target === '/home') {
+        target = '/'
+      }
+      navigate(target)
+    };
   }
 
   const handleKeyDown = (e) => {
