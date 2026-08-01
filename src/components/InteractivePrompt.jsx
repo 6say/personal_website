@@ -54,7 +54,7 @@ function InteractivePrompt() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder=" "
+        placeholder="type command"
         style={{
           backgroundColor: 'transparent',
           border: 'none',
